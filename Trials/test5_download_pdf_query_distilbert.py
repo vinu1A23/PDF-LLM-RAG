@@ -18,7 +18,7 @@ with urllib.request.urlopen(url) as response, open(file_name, 'wb') as out_file:
 
 model_name = os.getenv("MODEL_NAME")
 print(model_name)
-model_config_path = os.getenv("MODEL_CONFIG") #Load the
+model_config_path = os.getenv("MODEL_CONFIG") #Load the model config
 
 
 question_answerer = pipeline("question-answering", model='distilbert/distilbert-base-cased-distilled-squad')
