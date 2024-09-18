@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Query</title>
+</head>
+<body>
+    <h1>Send Query to Flask App</h1>
+    <input type="text" id="query" placeholder="Enter Query" required>
+    <button id="submit">Submit</button>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', async () => {
+            const query = document.getElementById('query').value;
+
+            const response = await fetch('http://127.0.0.1:5000/enter_query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query: query }),
+            });
+
+            const data = await response.json();
+            console.log(data); // Handle the response as needed
+        });
+    </script>
+</body>
+</html>
