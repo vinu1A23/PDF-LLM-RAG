@@ -31,6 +31,9 @@ async def download_pdf(url,name):
         file_name = "Mediapipe.pdf"
     else:
         file_name = name
+    """async with urllib.request.urlopen(url) as response:
+        async with open(file_name, 'wb') as out_file:
+            await shutil.copyfileobj(response, out_file)"""
     logger.info(f"file_name is ",{file_name})
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
@@ -56,7 +59,7 @@ async def split_doc(content):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
 
     if content is None or content == "":
-        docs = ""
+        docs = PyPDFLoader("Mediapipe.pdf").load()
     else:
         docs = content
 
@@ -96,36 +99,43 @@ def vector_database_setup(document_splitted, embeddings):
 
 
 def load_model(
-    model_name = "Qwen/Qwen2-0.5B-Instruct",
+    model_name="Qwen/Qwen2-0.5B-Instruct",
     torch_dtype="auto",
     device_map="cpu",
-    cache_dir= cache_directory
-    )
+    cache_dir=cache_directory,
+    max_length=1024
+    ):
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        torch_dtype=torch_dtype,
+        device_map=device_map,
+        cache_dir=cache_dir
+        )
+    # Load the tokenizer associated with the specified model
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name, padding=True,
+        truncation=True,
+        max_length=max_length,
+        cache_dir=cache_directory
+        )
+    return model,tokenizer
+
+
+def generate_context(db, query):
+    if query is None or query == "":
+        question = "What is architecture used?"
+    else:
+        question = query
+    searchDocs = db.similarity_search(question)
+    logger.info(" *****, Q was , " + question+ "***answer is within doc split ** "+str(searchDocs[0].page_content))
+    logger.info(" len of searchDocs is "+ len(searchDocs))
+    context = ""
+    for i in range(min(4,len(searchDocs))):
+        context += searchDocs[i].page_content
+    return context
+
 
 """
-
-
-question = ""
-
-if question is None or question == "":
-    question = input("\n\n Enter query \n")
-else:
-    question = "What is architecture used?"
-
-searchDocs = db.similarity_search(question)
-print("\n *****, Q was , ", question, "***answer is within doc split **\n",searchDocs[0].page_content)
-print("\n\n len of searchDocs is ", len(searchDocs),"\n\n")
-context = ""
-for i in range(min(4,len(searchDocs))):
-    context += searchDocs[i].page_content
-
-# Specify the model name you want to use
-model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen2-0.5B-Instruct",
-
-)
-# Load the tokenizer associated with the specified model
-tokenizer = AutoTokenizer.from_pretrained(model_name, padding=True, truncation=True, max_length=512, cache_dir=cache_directory)
 
 prompt = question
 messages = [
