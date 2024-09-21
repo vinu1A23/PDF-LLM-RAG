@@ -31,9 +31,6 @@ async def download_pdf(url,name):
         file_name = "Mediapipe.pdf"
     else:
         file_name = name
-    """async with urllib.request.urlopen(url) as response:
-        async with open(file_name, 'wb') as out_file:
-            await shutil.copyfileobj(response, out_file)"""
     logger.info(f"file_name is ",{file_name})
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
