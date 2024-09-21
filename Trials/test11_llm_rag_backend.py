@@ -21,6 +21,7 @@ device = 'cpu'
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='Test11_backend.log', encoding='utf-8', level=logging.DEBUG)
 
+
 async def download_pdf(url,name):
     if url is None or url == "":
         file_url = "https://arxiv.org/pdf/1906.08172"
@@ -57,7 +58,6 @@ async def split_doc(content):
     # It splits text into chunks of 1000 characters each with a 150-character overlap.
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
 
-
     if content is None or content == "":
         docs = ""
     else:
@@ -71,30 +71,42 @@ async def split_doc(content):
     return document_splitted
 
 
+def load_embedding(
+    modelPath="Alibaba-NLP/gte-multilingual-base",
+    model_kwargs={'device':'cpu', 'trust_remote_code':'True'},
+    encode_kwargs={'normalize_embeddings': False},
+    cache_directory=cache_directory
+     ):
+    # Initialize an instance of HuggingFaceEmbeddings with the specified parameters
+
+    embeddings = HuggingFaceEmbeddings(
+        model_name=modelPath,  # Provide the pre-trained model's path
+        model_kwargs=model_kwargs,  # Pass the model configuration options
+        encode_kwargs=encode_kwargs,  # Pass the encoding options
+        cache_folder=cache_directory
+    )
+
+    text = "This is a test document."
+    query_result = embeddings.embed_query(text)
+    logger.info(" Printing result of query result "+str(query_result[:3]))
+    return embeddings
+
+
+def vector_database_setup(document_splitted, embeddings):
+
+    db = FAISS.from_documents(document_splitted, embeddings)
+    return db
+
+
+def load_model(
+    model_name = "Qwen/Qwen2-0.5B-Instruct",
+    torch_dtype="auto",
+    device_map="cpu",
+    cache_dir= cache_directory
+    )
 
 """
-# Define the path to the pre-trained model you want to use
-modelPath = "Alibaba-NLP/gte-multilingual-base"
 
-# Create a dictionary with model configuration options, specifying to use the CPU for computations
-model_kwargs = {'device':device, 'trust_remote_code':'True'}
-
-# Create a dictionary with encoding options, specifically setting 'normalize_embeddings' to False
-encode_kwargs = {'normalize_embeddings': False}
-
-# Initialize an instance of HuggingFaceEmbeddings with the specified parameters
-embeddings =    HuggingFaceEmbeddings(
-    model_name= modelPath,     # Provide the pre-trained model's path
-    model_kwargs=model_kwargs, # Pass the model configuration options
-    encode_kwargs=encode_kwargs, # Pass the encoding options
-    cache_folder= cache_directory
-)
-
-text = "This is a test document."
-query_result = embeddings.embed_query(text)
-print("\n Printing result of query result \n" , query_result[:3])
-
-db = FAISS.from_documents(document_splitted, embeddings)
 
 question = ""
 
@@ -111,11 +123,9 @@ for i in range(min(4,len(searchDocs))):
     context += searchDocs[i].page_content
 
 # Specify the model name you want to use
-model_name = "Qwen/Qwen2-0.5B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen2-0.5B-Instruct",
-    torch_dtype="auto",
-    device_map="cpu", cache_dir= cache_directory
+
 )
 # Load the tokenizer associated with the specified model
 tokenizer = AutoTokenizer.from_pretrained(model_name, padding=True, truncation=True, max_length=512, cache_dir=cache_directory)
