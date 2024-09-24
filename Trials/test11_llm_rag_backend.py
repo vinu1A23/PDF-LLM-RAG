@@ -31,15 +31,14 @@ async def download_pdf(url,name):
         file_name = "Mediapipe.pdf"
     else:
         file_name = name
-    """async with urllib.request.urlopen(url) as response:
-        async with open(file_name, 'wb') as out_file:
-            await shutil.copyfileobj(response, out_file)"""
-    logger.info(f"file_name is ",{file_name})
+
+    logger.info(f"file_name is ,{file_name}")
     async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
+        async with session.get(file_url) as response:
             async with aiofiles.open(file_name, 'wb') as out_file:
                 content = await response.read()
                 return await out_file.write(content)
+
 
 async def load_pdf(name):
 
@@ -47,7 +46,7 @@ async def load_pdf(name):
         file_path = "Mediapipe.pdf"
     else :
         file_path = name
-    logger.info("file path given as", file_path)
+    logger.info(f"file path given as  {file_path}")
     loader = await  asyncio.to_thread(PyPDFLoader,file_path)
     return loader.load()
 
@@ -118,7 +117,7 @@ def load_model(
         max_length=max_length,
         cache_dir=cache_directory
         )
-    return model,tokenizer
+    return model, tokenizer
 
 
 def generate_context(db, query):
