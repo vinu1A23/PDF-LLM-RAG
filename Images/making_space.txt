@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+hh<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <body>
     <h1>Send URL and name to Flask App</h1>
     <input type="text" id="url" placeholder="Enter URL" required>
-    <input type="text" id="name" placeholder="Enter name" required>
+    <input type="text" id="name" placeholder="Enter your name" required>
     <button id="submit">Submit</button>
 
     <script>
