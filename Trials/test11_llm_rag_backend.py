@@ -23,6 +23,7 @@ logging.basicConfig(filename='Test11_backend.log', encoding='utf-8', level=loggi
 
 
 async def download_pdf(url,name):
+    
     if url is None or url == "":
         file_url = "https://arxiv.org/pdf/1906.08172"
     else:
@@ -41,7 +42,7 @@ async def download_pdf(url,name):
 
 
 async def load_pdf(name):
-
+    
     if name is None or name == "":
         file_path = "Mediapipe.pdf"
     else :
@@ -104,6 +105,7 @@ def load_model(
     cache_dir=cache_directory,
     max_length=1024
     ):
+        
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
@@ -121,6 +123,7 @@ def load_model(
 
 
 def generate_context(db, query):
+    
     if query is None or query == "":
         question = "What is architecture used?"
     else:
