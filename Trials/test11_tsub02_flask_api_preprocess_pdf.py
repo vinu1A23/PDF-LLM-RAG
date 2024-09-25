@@ -14,11 +14,11 @@ logging.basicConfig(filename='Test1_tsub01_backend.log', encoding='utf-8', level
 
 def extract_text_from_pdf(pdf_content):
     docs = pdf_content
-    print("len of docs is" ,len(docs))
+    logger.info("len of docs is" ,len(docs))
     all_data=""
     for i in range(len(docs)):
         all_data += docs[i].page_content[0:]
-    logger.log("Printing a bit of all_data "+str(all_data[:100]))
+    logger.info("Printing a bit of all_data {all_data[:100]}")
     return all_data
 
 
@@ -48,7 +48,6 @@ async def preprocess_pdf():
     data = request.json
     """query = data.get('query')"""
     name = data.get('name')
-
 
     if not name:
         return jsonify({"error": "Name is required"}), 400
