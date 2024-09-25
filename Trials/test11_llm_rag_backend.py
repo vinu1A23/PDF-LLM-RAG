@@ -2,7 +2,7 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-"""from transformers import AutoTokenizer,  AutoModelForCausalLM """
+from transformers import AutoTokenizer,  AutoModelForCausalLM
 from langchain_community.document_loaders import PyPDFLoader
 import os
 import urllib.request
@@ -23,9 +23,9 @@ logging.basicConfig(filename='Test11_backend.log', encoding='utf-8', level=loggi
 
 
 async def download_pdf(url,name):
-    
     if url is None or url == "":
-        file_url = "https://arxiv.org/pdf/1906.08172"
+        file_url = "https://arxiv.org/pdf/
+        1906.08172"
     else:
         file_url = url
     if name is None or name =="":
@@ -42,13 +42,13 @@ async def download_pdf(url,name):
 
 
 async def load_pdf(name):
-    
+
     if name is None or name == "":
         file_path = "Mediapipe.pdf"
-    else :
+    else:
         file_path = name
     logger.info(f"file path given as  {file_path}")
-    loader = await  asyncio.to_thread(PyPDFLoader,file_path)
+    loader = await asyncio.to_thread(PyPDFLoader, file_path)
     return loader.load()
 
 
@@ -66,7 +66,7 @@ async def split_doc(content):
     # 'data' holds the text you want to split, split the text into documents
     # using the text splitter.
     document_splitted = text_splitter.split_documents(docs)
-    logger.info("\n***** Logging the first doc split**** \n" ,document_splitted[0])
+    logger.info("\n***** Logging the first doc split**** \n  {document_splitted[0]}")
 
     return document_splitted
 
@@ -105,7 +105,6 @@ def load_model(
     cache_dir=cache_directory,
     max_length=1024
     ):
-        
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         torch_dtype=torch_dtype,
@@ -123,7 +122,6 @@ def load_model(
 
 
 def generate_context(db, query):
-    
     if query is None or query == "":
         question = "What is architecture used?"
     else:
@@ -137,6 +135,7 @@ def generate_context(db, query):
     return context
 
 
+# Specify the model name you want to use
 """
 
 prompt = question
@@ -322,3 +321,7 @@ After detection, the detection-merging node compares
 7
 
 """
+
+async def download_pdf(url,name):
+    if url is None or url == "":
+        file_url = "https://arxiv.org/pdf/1
