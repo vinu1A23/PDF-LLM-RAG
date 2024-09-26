@@ -16,16 +16,17 @@ cache_directory = os.getenv("cache_directory")
 
 
 
+
 device = 'cpu'
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='Test11_backend.log', encoding='utf-8', level=logging.DEBUG)
-
+embedding_loaded = False
+embedding = ""
 
 async def download_pdf(url,name):
     if url is None or url == "":
-        file_url = "https://arxiv.org/pdf/
-        1906.08172"
+        file_url = "https://arxiv.org/pdf/1906.08172"
     else:
         file_url = url
     if name is None or name =="":
@@ -128,14 +129,13 @@ def generate_context(db, query):
         question = query
     searchDocs = db.similarity_search(question)
     logger.info(" *****, Q was , " + question+ "***answer is within doc split ** "+str(searchDocs[0].page_content))
-    logger.info(" len of searchDocs is "+ len(searchDocs))
+    logger.info(" len of searchDocs is "+ str(len(searchDocs)))
     context = ""
     for i in range(min(4,len(searchDocs))):
         context += searchDocs[i].page_content
     return context
 
 
-# Specify the model name you want to use
 """
 
 prompt = question
@@ -321,7 +321,3 @@ After detection, the detection-merging node compares
 7
 
 """
-
-async def download_pdf(url,name):
-    if url is None or url == "":
-        file_url = "https://arxiv.org/pdf/1
