@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send URL</title>
+</head>
+<body>
+    <h1>Send URL and name to Flask App</h1>
+    <input type="text" id="url" placeholder="Enter URL" required>
+    <input type="text" id="name" placeholder="Enter  name" required>
+    <button id="submit">Submit</button>
+    <button id="preprocess_pdf">Preprocess PDF</button>
+    <br>
+    <input type="text" id="query" placeholder="Enter the query" required>
+    <button id="gen_context">Generate Context</button>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', async () => {
+            const url = document.getElementById('url').value;
+            const name = document.getElementById('name').value;
+            const response = await fetch('http://127.0.0.1:5000/get_pdf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ url: url , name: name}),
+            });
+
+            const data = await response.json();
+            console.log(data); // Handle the response as needed
+        });
+        document.getElementById('preprocess_pdf').addEventListener('click', async () => {
+
+            const name = document.getElementById('name').value;
+            const response = await fetch('http://127.0.0.1:5000/preprocess_pdf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name:  name}),
+            });
+
+            const data = await response.json();
+            console.log(data); // Handle the response as needed
+        });
+        document.getElementById('gen_context').addEventListener('click', async () => {
+
+            const name = document.getElementById('name').value;
+            const query = document.getElementById('query').value;
+            const response = await fetch('http://127.0.0.1:5000/gen_context', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: name, query: query}),
+            });
+
+            const data = await response.json();
+            console.log(data); // Handle the response as needed
+        });
+    </script>
+</body>
+</html>
