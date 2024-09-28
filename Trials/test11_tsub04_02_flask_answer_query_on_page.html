@@ -15,6 +15,9 @@
     <input type="text" id="query" placeholder="Enter the query" required>
     <button id="gen_context">Generate Context</button>
     <button id="ans_query">Answer Query</button>
+    <div id="content-container"></div>
+    <div id="preprocess-container"></div>
+    <div id="context-container"></div>
     <div id="result-container"></div>
 
     <script>
@@ -31,6 +34,11 @@
 
             const data = await response.json();
             console.log(data); // Handle the response as needed
+            document.getElementById('content-container').innerHTML = `
+            <h2>Content of PDF</h2>
+            <p>Content: ${data.text}</p>
+        `   ;
+
         });
         document.getElementById('preprocess_pdf').addEventListener('click', async () => {
 
@@ -45,6 +53,11 @@
 
             const data = await response.json();
             console.log(data); // Handle the response as needed
+            document.getElementById('preprocess-container').innerHTML = `
+            <h2>Preprocessed PDF</h2>
+            <p>Doc splits: ${data.doc_splitted}</p>
+           `;
+
         });
         document.getElementById('gen_context').addEventListener('click', async () => {
 
@@ -60,6 +73,10 @@
 
             const data = await response.json();
             console.log(data); // Handle the response as needed
+            document.getElementById('context-container').innerHTML = `
+            <h2>Context Generated</h2>
+            <p>Context: ${data.context}</p>
+           `;
         });
         document.getElementById('ans_query').addEventListener('click', async () => {
 
