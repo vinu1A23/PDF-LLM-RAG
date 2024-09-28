@@ -9,15 +9,13 @@ app = Flask(__name__)
 CORS(app)
 
 
-
-
 def extract_text_from_pdf(pdf_content):
     docs = pdf_content
-    logger.info("len of docs is" ,len(docs))
+    logger.info("len of docs is" + str(len(docs)))
     all_data=""
     for i in range(len(docs)):
         all_data += docs[i].page_content[0:]
-    logger.info("Printing a bit of all_data {all_data[:100]}")
+    logger.info(f"Printing a bit of all_data {all_data[:100]}")
     return all_data
 
 
@@ -118,7 +116,7 @@ async def ans_queryt():
             model_loaded = True
         answer = answer_query(context, query, model, tokenizer)
 
-        return jsonify({"answer": answer})
+        return jsonify({"answer": answer,"context":context,"preprocessed_pdf":str(doc_splitted),"content":extract_text_from_pdf(pdf_content)})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
