@@ -14,15 +14,15 @@ import asyncio
 
 cache_directory = os.getenv("cache_directory")
 
-
-
-
 device = 'cpu'
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='Test11_backend.log', encoding='utf-8', level=logging.DEBUG)
 embedding_loaded = False
-embedding = ""
+embedding = None
+model_loaded = False
+model = None
+tokenizer = None
 
 async def download_pdf(url,name):
     if url is None or url == "":
@@ -67,7 +67,7 @@ async def split_doc(content):
     # 'data' holds the text you want to split, split the text into documents
     # using the text splitter.
     document_splitted = text_splitter.split_documents(docs)
-    logger.info("\n***** Logging the first doc split**** \n  {document_splitted[0]}")
+    logger.info(f"***** Logging the first doc split****   {document_splitted[0]}")
 
     return document_splitted
 
@@ -128,43 +128,67 @@ def generate_context(db, query):
     else:
         question = query
     searchDocs = db.similarity_search(question)
-    logger.info(" *****, Q was , " + question+ "***answer is within doc split ** "+str(searchDocs[0].page_content))
+    logger.info(f" *****, Q was , {question} ***answer is within doc split ** "+str(searchDocs[0].page_content))
     logger.info(" len of searchDocs is "+ str(len(searchDocs)))
     context = ""
     for i in range(min(4,len(searchDocs))):
         context += searchDocs[i].page_content
     return context
 
+def answer_query(context, query, model_to_be_used, tokenizer_to_be_used):
+    global embedding
+    global embedding_loaded
+    global model
+    global model_loaded
+    global tokenizer
+
+    if query is None or query == "":
+        prompt = "What is architecture used?"
+    else:
+        prompt = query
+    if context is None or context == "":
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000,  chunk_overlap=150)
+        docs = PyPDFLoader("Mediapipe.pdf").load()
+        document_splitted = text_splitter.split_documents(docs)
+        if embedding_loaded == False:
+            embedding = load_embedding()
+            embedding_loaded = True
+        db = vector_database_setup(document_splitted, embedding)
+        context = generate_context(db,query)
+    if model_loaded == False:
+        model,tokenizer = load_model()
+        model_loaded = True
+    else:
+        model = model_to_be_used
+    if tokenizer_to_be_used != tokenizer:
+        tokenizer = tokenizer_to_be_used
+
+    messages = [
+        {"role": "system", "content": "Answer question by identifying relevant relation and facts in knowledge -  "+context},
+        {"role": "user", "content": prompt}
+        ]
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+        )
+    model_inputs = tokenizer([text], return_tensors="pt").to(device)
+
+    generated_ids = model.generate(
+        **model_inputs,
+        max_new_tokens=700
+        )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+        ]
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    logger.info(f"the response generated is {response}")
+    logger.info(f"The knowledge used was {context}")
+    return response
 
 """
 
-prompt = question
-messages = [
-    {"role": "system", "content": "Answer question by identifying relation and facts in knowledge -  "+context},
-    {"role": "user", "content": prompt}
-]
-text = tokenizer.apply_chat_template(
-    messages,
-    tokenize=False,
-    add_generation_prompt=True
-)
-
-model_inputs = tokenizer([text], return_tensors="pt").to(device)
-
-generated_ids = model.generate(
-    **model_inputs,
-    max_new_tokens=700,
-)
-generated_ids = [
-    output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
-]
-
-response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-print("\n \n the response generated is \n\n", response)
-print("\n\n The knowledge used was \n\n", context)
-
 Output on console
-
 
 ***** Printing the first doc split****
  page_content='MediaPipe: A Framework for Building Perception Pipelines
