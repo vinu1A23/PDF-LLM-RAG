@@ -1,0 +1,316 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 107-950-820
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2024 12:42:05] "OPTIONS /gen_context HTTP/1.1" 200 -
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:test12_llm_rag_backend_dockerize_ready:file path given as  Mediapipe.pdf
+INFO:test12_llm_rag_backend_dockerize_ready:***** Logging the first doc split****   page_content='MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash, Chris McClanahan, Esha Uboweja, Michael Hays,
+Fan Zhang, Chuo-Ling Chang, Ming Guang Yong, Juhyun Lee, Wan-Teh Chang, Wei Hua,
+Manfred Georg and Matthias Grundmann
+Google Research
+mediapipe@google.com
+Abstract
+Building applications that perceive the world around
+them is challenging. A developer needs to (a) select and
+develop corresponding machine learning algorithms and
+models, (b) build a series of prototypes and demos, (c) bal-
+ance resource consumption against the quality of the so-
+lutions, and ﬁnally (d) identify and mitigate problematic
+cases. The MediaPipe framework addresses all of these
+challenges. A developer can use MediaPipe to build pro-
+totypes by combining existing perception components, to
+advance them to polished cross-platform applications and
+measure system performance and resource consumption on
+target platforms. We show that these features enable a de-' metadata={'source': 'Mediapipe.pdf', 'page': 0}
+INFO:datasets:PyTorch version 2.4.1 available.
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: Alibaba-NLP/gte-multilingual-base
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/modules.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114470733824 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG:filelock:Lock 139114470733824 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/modules.json HTTP/11" 200 349
+DEBUG:filelock:Attempting to release lock 139114470733824 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG:filelock:Lock 139114470733824 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/952a9b81c0bfd99800fabf352f69c7ccd46c5e43.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/config_sentence_transformers.json HTTP/11" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/README.md HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114465501568 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/ff685d86c05952412d5f667fbd11b56622acf291.lock
+DEBUG:filelock:Lock 139114465501568 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/ff685d86c05952412d5f667fbd11b56622acf291.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/README.md HTTP/11" 200 122946
+DEBUG:filelock:Attempting to release lock 139114465501568 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/ff685d86c05952412d5f667fbd11b56622acf291.lock
+DEBUG:filelock:Lock 139114465501568 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/ff685d86c05952412d5f667fbd11b56622acf291.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/modules.json HTTP/11" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114465312496 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b3030f4edaca7791ed3d3bfd6dd41bb25b54718c.lock
+DEBUG:filelock:Lock 139114465312496 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b3030f4edaca7791ed3d3bfd6dd41bb25b54718c.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/sentence_bert_config.json HTTP/11" 200 55
+DEBUG:filelock:Attempting to release lock 139114465312496 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b3030f4edaca7791ed3d3bfd6dd41bb25b54718c.lock
+DEBUG:filelock:Lock 139114465312496 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b3030f4edaca7791ed3d3bfd6dd41bb25b54718c.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114472697120 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9f640b05ee684e9680fdc90000de85559061c5ef.lock
+DEBUG:filelock:Lock 139114472697120 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9f640b05ee684e9680fdc90000de85559061c5ef.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/config.json HTTP/11" 200 1429
+DEBUG:filelock:Attempting to release lock 139114472697120 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9f640b05ee684e9680fdc90000de85559061c5ef.lock
+DEBUG:filelock:Lock 139114472697120 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9f640b05ee684e9680fdc90000de85559061c5ef.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/new-impl/resolve/main/configuration.py HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114466669440 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/8f8b2bd73f37c270aed02826ed1dee44a8691a0a.lock
+DEBUG:filelock:Lock 139114466669440 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/8f8b2bd73f37c270aed02826ed1dee44a8691a0a.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/new-impl/resolve/main/configuration.py HTTP/11" 200 7127
+DEBUG:filelock:Attempting to release lock 139114466669440 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/8f8b2bd73f37c270aed02826ed1dee44a8691a0a.lock
+DEBUG:filelock:Lock 139114466669440 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/8f8b2bd73f37c270aed02826ed1dee44a8691a0a.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/config.json HTTP/11" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/new-impl/resolve/main/modeling.py HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114463135600 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/5470302b8f4ccaea67eba9a3ca6fbdeea657343b.lock
+DEBUG:filelock:Lock 139114463135600 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/5470302b8f4ccaea67eba9a3ca6fbdeea657343b.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/new-impl/resolve/main/modeling.py HTTP/11" 200 59023
+DEBUG:filelock:Attempting to release lock 139114463135600 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/5470302b8f4ccaea67eba9a3ca6fbdeea657343b.lock
+DEBUG:filelock:Lock 139114463135600 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--new-impl/5470302b8f4ccaea67eba9a3ca6fbdeea657343b.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/model.safetensors HTTP/11" 302 0
+DEBUG:filelock:Attempting to acquire lock 139116322765040 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f5a35a10faa54da7717870af1517c9b41e9bd8e3880bc5a8e9363d4c3c63e9b0.lock
+DEBUG:filelock:Lock 139116322765040 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f5a35a10faa54da7717870af1517c9b41e9bd8e3880bc5a8e9363d4c3c63e9b0.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+DEBUG:urllib3.connectionpool:https://cdn-lfs-us-1.hf.co:443 "GET /repos/da/ab/daabc30c9684bf13976f6532478df7a6b142c43339ff01609b017df9fc2484a2/f5a35a10faa54da7717870af1517c9b41e9bd8e3880bc5a8e9363d4c3c63e9b0?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1727939534&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyNzkzOTUzNH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2RhL2FiL2RhYWJjMzBjOTY4NGJmMTM5NzZmNjUzMjQ3OGRmN2E2YjE0MmM0MzMzOWZmMDE2MDliMDE3ZGY5ZmMyNDg0YTIvZjVhMzVhMTBmYWE1NGRhNzcxNzg3MGFmMTUxN2M5YjQxZTliZDhlMzg4MGJjNWE4ZTkzNjNkNGMzYzYzZTliMD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=HhdoG~ZZKsrgUAMCjqKBoyN2Um-d4CTFUhyH-oYPyqq-etj7zRyXrDWusD5GTikn6UTHeONVQZFisYXpMLr2hgeUd7tqzjPrcPa6o1Q5ZO~jjh5JBA1li3pH0aUO52ElFxMo2KXRE0eSNmH0WQbZK~D-m3~nSx1szpSgqzLf1K6CVeNcfDqfQyYF04UvoAss2SyyzsbOuOOT8hpYiwL0qmErCQRqL9rw8ZQWASzDN8trMqyMZeZKLNzsnQb2gnypSo-5GR-jQbI9Y0QZjo3PfQczA8v76xWInuHhjq0ldVyA50Z8-GT-3HEBgS25W1ns~1fghcehJO9FOKRU0BpLag__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 610753338
+DEBUG:filelock:Attempting to release lock 139116322765040 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f5a35a10faa54da7717870af1517c9b41e9bd8e3880bc5a8e9363d4c3c63e9b0.lock
+DEBUG:filelock:Lock 139116322765040 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f5a35a10faa54da7717870af1517c9b41e9bd8e3880bc5a8e9363d4c3c63e9b0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139115524780160 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9b34bdaff958c3af7ffd359f71ee05fe7651e3fa.lock
+DEBUG:filelock:Lock 139115524780160 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9b34bdaff958c3af7ffd359f71ee05fe7651e3fa.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/tokenizer_config.json HTTP/11" 200 1149
+DEBUG:filelock:Attempting to release lock 139115524780160 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9b34bdaff958c3af7ffd359f71ee05fe7651e3fa.lock
+DEBUG:filelock:Lock 139115524780160 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/9b34bdaff958c3af7ffd359f71ee05fe7651e3fa.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/sentencepiece.bpe.model HTTP/11" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/tokenizer.json HTTP/11" 302 0
+DEBUG:filelock:Attempting to acquire lock 139114461762464 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af.lock
+DEBUG:filelock:Lock 139114461762464 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af.lock
+DEBUG:urllib3.connectionpool:https://cdn-lfs-us-1.hf.co:443 "GET /repos/da/ab/daabc30c9684bf13976f6532478df7a6b142c43339ff01609b017df9fc2484a2/f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27tokenizer.json%3B+filename%3D%22tokenizer.json%22%3B&response-content-type=application%2Fjson&Expires=1727939593&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyNzkzOTU5M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2RhL2FiL2RhYWJjMzBjOTY4NGJmMTM5NzZmNjUzMjQ3OGRmN2E2YjE0MmM0MzMzOWZmMDE2MDliMDE3ZGY5ZmMyNDg0YTIvZjU5OTI1ZmNiOTBjOTJiODk0Y2I5M2U1MWJiOWI0YTYxMDVjNWMyNDlmZTU0Y2UxYzcwNDQyMGFjMzliODFhZj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=Bup1eBASeP~T0WYiDFbuzUCd2L1y4dZYYaBUOIpjvbexZUy3MmZgxQ59gjdK~AunpuKC9wCufhy2cM5ukBFiStkmAzhfnTdYo0Fz10ZlknaeEyQRSvEioikLa3ZJz3zkgY3P2JvoS2i1A674o-mSB6TCyzuuTsN4VbyLyc9KCJ~FpIDISJ1MiTMUBP~Fk11PUYxmJSWvAV3WqR9hkcM88RK07IWr2zfkH4LBW34rNlfc6ThRCaPBjf5qz0rERFfR6CLcOSC4RiDzkAAQViXC7ZUtmFqLFZHKccqr6wpqo3LuWSOCwkGYM4CMnDSpyySeuvbxh6nPjUOqkc3lnBpbow__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 17082756
+DEBUG:filelock:Attempting to release lock 139114461762464 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af.lock
+DEBUG:filelock:Lock 139114461762464 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/f59925fcb90c92b894cb93e51bb9b4a6105c5c249fe54ce1c704420ac39b81af.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/added_tokens.json HTTP/11" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/main/special_tokens_map.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139118821247936 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b1879d702821e753ffe4245048eee415d54a9385.lock
+DEBUG:filelock:Lock 139118821247936 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b1879d702821e753ffe4245048eee415d54a9385.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/main/special_tokens_map.json HTTP/11" 200 964
+DEBUG:filelock:Attempting to release lock 139118821247936 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b1879d702821e753ffe4245048eee415d54a9385.lock
+DEBUG:filelock:Lock 139118821247936 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/b1879d702821e753ffe4245048eee415d54a9385.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/models/Alibaba-NLP/gte-multilingual-base/revision/main HTTP/11" 200 227036
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Alibaba-NLP/gte-multilingual-base/resolve/7fc06782350c1a83f88b15dd4b38ef853d3b8503/1_Pooling/config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114451838368 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/da5bfd57e34ca45582e4bdbaa3e6deb9efffa08d.lock
+DEBUG:filelock:Lock 139114451838368 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/da5bfd57e34ca45582e4bdbaa3e6deb9efffa08d.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Alibaba-NLP/gte-multilingual-base/resolve/7fc06782350c1a83f88b15dd4b38ef853d3b8503/1_Pooling/config.json HTTP/11" 200 190
+DEBUG:filelock:Attempting to release lock 139114451838368 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/da5bfd57e34ca45582e4bdbaa3e6deb9efffa08d.lock
+DEBUG:filelock:Lock 139114451838368 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Alibaba-NLP--gte-multilingual-base/da5bfd57e34ca45582e4bdbaa3e6deb9efffa08d.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /api/models/Alibaba-NLP/gte-multilingual-base HTTP/11" 200 227036
+INFO:test12_llm_rag_backend_dockerize_ready: Printing result of query result [-0.0700540691614151, 0.03607219457626343, -0.031630437821149826]
+DEBUG:faiss.loader:Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+INFO:faiss.loader:Loading faiss with AVX512 support.
+INFO:faiss.loader:Successfully loaded faiss with AVX512 support.
+INFO:test12_llm_rag_backend_dockerize_ready: *****, Q was , give the architecture of mediapipe framework ***answer is within doc split ** MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash, Chris McClanahan, Esha Uboweja, Michael Hays,
+Fan Zhang, Chuo-Ling Chang, Ming Guang Yong, Juhyun Lee, Wan-Teh Chang, Wei Hua,
+Manfred Georg and Matthias Grundmann
+Google Research
+mediapipe@google.com
+Abstract
+Building applications that perceive the world around
+them is challenging. A developer needs to (a) select and
+develop corresponding machine learning algorithms and
+models, (b) build a series of prototypes and demos, (c) bal-
+ance resource consumption against the quality of the so-
+lutions, and ﬁnally (d) identify and mitigate problematic
+cases. The MediaPipe framework addresses all of these
+challenges. A developer can use MediaPipe to build pro-
+totypes by combining existing perception components, to
+advance them to polished cross-platform applications and
+measure system performance and resource consumption on
+target platforms. We show that these features enable a de-
+INFO:test12_llm_rag_backend_dockerize_ready: len of searchDocs is 4
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2024 12:43:35] "POST /gen_context HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2024 12:44:04] "OPTIONS /ans_query HTTP/1.1" 200 -
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:test12_llm_rag_backend_dockerize_ready:file path given as  Mediapipe.pdf
+INFO:test12_llm_rag_backend_dockerize_ready:***** Logging the first doc split****   page_content='MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash, Chris McClanahan, Esha Uboweja, Michael Hays,
+Fan Zhang, Chuo-Ling Chang, Ming Guang Yong, Juhyun Lee, Wan-Teh Chang, Wei Hua,
+Manfred Georg and Matthias Grundmann
+Google Research
+mediapipe@google.com
+Abstract
+Building applications that perceive the world around
+them is challenging. A developer needs to (a) select and
+develop corresponding machine learning algorithms and
+models, (b) build a series of prototypes and demos, (c) bal-
+ance resource consumption against the quality of the so-
+lutions, and ﬁnally (d) identify and mitigate problematic
+cases. The MediaPipe framework addresses all of these
+challenges. A developer can use MediaPipe to build pro-
+totypes by combining existing perception components, to
+advance them to polished cross-platform applications and
+measure system performance and resource consumption on
+target platforms. We show that these features enable a de-' metadata={'source': 'Mediapipe.pdf', 'page': 0}
+INFO:test12_llm_rag_backend_dockerize_ready: *****, Q was , give the architecture of mediapipe framework ***answer is within doc split ** MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash, Chris McClanahan, Esha Uboweja, Michael Hays,
+Fan Zhang, Chuo-Ling Chang, Ming Guang Yong, Juhyun Lee, Wan-Teh Chang, Wei Hua,
+Manfred Georg and Matthias Grundmann
+Google Research
+mediapipe@google.com
+Abstract
+Building applications that perceive the world around
+them is challenging. A developer needs to (a) select and
+develop corresponding machine learning algorithms and
+models, (b) build a series of prototypes and demos, (c) bal-
+ance resource consumption against the quality of the so-
+lutions, and ﬁnally (d) identify and mitigate problematic
+cases. The MediaPipe framework addresses all of these
+challenges. A developer can use MediaPipe to build pro-
+totypes by combining existing perception components, to
+advance them to polished cross-platform applications and
+measure system performance and resource consumption on
+target platforms. We show that these features enable a de-
+INFO:test12_llm_rag_backend_dockerize_ready: len of searchDocs is 4
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114450060208 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/463b055262b6c66c4629a74a4b300bfe2ed31d3c.lock
+DEBUG:filelock:Lock 139114450060208 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/463b055262b6c66c4629a74a4b300bfe2ed31d3c.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/config.json HTTP/11" 200 659
+DEBUG:filelock:Attempting to release lock 139114450060208 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/463b055262b6c66c4629a74a4b300bfe2ed31d3c.lock
+DEBUG:filelock:Lock 139114450060208 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/463b055262b6c66c4629a74a4b300bfe2ed31d3c.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/model.safetensors HTTP/11" 302 0
+DEBUG:filelock:Attempting to acquire lock 139115752054880 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96.lock
+DEBUG:filelock:Lock 139115752054880 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96.lock
+DEBUG:urllib3.connectionpool:https://cdn-lfs-us-1.hf.co:443 "GET /repos/0b/33/0b33b40e3f2f21c5ce568ad74f4179cf394bc859d143cc271bc0eccb0a91735b/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1727938743&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyNzkzODc0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzBiLzMzLzBiMzNiNDBlM2YyZjIxYzVjZTU2OGFkNzRmNDE3OWNmMzk0YmM4NTlkMTQzY2MyNzFiYzBlY2NiMGE5MTczNWIvMTMwMjgyYWYwZGZhOWZlNTg0MDczN2NjNDlhMGQzMzlkMDYwNzVmODNjNWEzMTVjMzM3MmM5YTA3NDBkMGI5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=cEnktbqKtiTrH8o-2q0SHQfK~jp50bYM2QGEax78ovNJ5xrowvpRU6I0i714EQDoTuK3~zSeZP6~rFXJb~ou1ecxoCTSdFLs6BdmIjKtQw2H4hNBX6fgTNwHvwC6mu7w-GCMLHA5etYpuvXG5ojfd99Lv~M7qleUm72fFLzAwBuVwc62nN470sIWR38vDIpSPxHUT2URrt0m4ArwohdsbVXgq6CD89As3-Md7rpVgM1np3tmxY3kfcywbeGPhkR-3z03XldrOF-yilXc4bNswb3p6ZwI~ggM~nIV0rOkJvs-OSUeXSyVW6-1NqrFrAconSD74XrJFtlVFwqRZymXAg__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 988097824
+DEBUG:filelock:Attempting to release lock 139115752054880 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96.lock
+DEBUG:filelock:Lock 139115752054880 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/generation_config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114451836688 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/dfc11073787daf1b0f9c0f1499487ab5f4c93738.lock
+DEBUG:filelock:Lock 139114451836688 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/dfc11073787daf1b0f9c0f1499487ab5f4c93738.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/generation_config.json HTTP/11" 200 242
+DEBUG:filelock:Attempting to release lock 139114451836688 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/dfc11073787daf1b0f9c0f1499487ab5f4c93738.lock
+DEBUG:filelock:Lock 139114451836688 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/dfc11073787daf1b0f9c0f1499487ab5f4c93738.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/tokenizer_config.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114488015344 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/ff55d7b9eb1384e5d4d7e75dc0f564c1a8833d6e.lock
+DEBUG:filelock:Lock 139114488015344 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/ff55d7b9eb1384e5d4d7e75dc0f564c1a8833d6e.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/tokenizer_config.json HTTP/11" 200 1287
+DEBUG:filelock:Attempting to release lock 139114488015344 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/ff55d7b9eb1384e5d4d7e75dc0f564c1a8833d6e.lock
+DEBUG:filelock:Lock 139114488015344 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/ff55d7b9eb1384e5d4d7e75dc0f564c1a8833d6e.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/vocab.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114449773840 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/4783fe10ac3adce15ac8f358ef5462739852c569.lock
+DEBUG:filelock:Lock 139114449773840 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/4783fe10ac3adce15ac8f358ef5462739852c569.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/vocab.json HTTP/11" 200 2776833
+DEBUG:filelock:Attempting to release lock 139114449773840 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/4783fe10ac3adce15ac8f358ef5462739852c569.lock
+DEBUG:filelock:Lock 139114449773840 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/4783fe10ac3adce15ac8f358ef5462739852c569.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/merges.txt HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114449284864 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.lock
+DEBUG:filelock:Lock 139114449284864 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/merges.txt HTTP/11" 200 1671839
+DEBUG:filelock:Attempting to release lock 139114449284864 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.lock
+DEBUG:filelock:Lock 139114449284864 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/tokenizer.json HTTP/11" 200 0
+DEBUG:filelock:Attempting to acquire lock 139114449768656 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/33ea6c72ebb92a237fa2bdf26c5ff16592efcdae.lock
+DEBUG:filelock:Lock 139114449768656 acquired on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/33ea6c72ebb92a237fa2bdf26c5ff16592efcdae.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /Qwen/Qwen2-0.5B-Instruct/resolve/main/tokenizer.json HTTP/11" 200 7028015
+DEBUG:filelock:Attempting to release lock 139114449768656 on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/33ea6c72ebb92a237fa2bdf26c5ff16592efcdae.lock
+DEBUG:filelock:Lock 139114449768656 released on /run/media/vinayak/OS/Users/dell/Documents/tan2002vinu/languages and services/python/data_analysis/Documents/hygwell/test12/cache/.locks/models--Qwen--Qwen2-0.5B-Instruct/33ea6c72ebb92a237fa2bdf26c5ff16592efcdae.lock
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/added_tokens.json HTTP/11" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/special_tokens_map.json HTTP/11" 404 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/config.json HTTP/11" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/generation_config.json HTTP/11" 200 0
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /Qwen/Qwen2-0.5B-Instruct/resolve/main/tokenizer_config.json HTTP/11" 200 0
+INFO:test12_llm_rag_backend_dockerize_ready:the response generated is The architecture of the MediAPI framework consists of several key components:
+
+1. **Graphs**: The framework provides a graphical representation of a pipeline's components, where each component is a Calculator (e.g., a CNN). 
+
+2. **Data Streams**: These represent the flow of data from one point in the pipeline to another.
+
+3. **Calculators**: They are the nodes of the graph, which process the input data and produce output data.
+
+4. **Stream Buffers**: These are buffers that store data from the previous step and allow for sequential processing.
+
+5. **Calculators and Stream Buffers**: The graphs connect these components through data streams, allowing for parallel processing.
+
+6. **Pipeline Definitions**: This defines the structure of the graph, specifying how components are connected and what happens during each step of the pipeline.
+
+7. **Graph Configuration Protocol Buffer**: It specifies the data structures used to describe the graph, including the data types of the streams and the order in which they are processed.
+
+8. **Graph Objects**: These objects represent individual components in the graph, encapsulating the logic and behavior of each component.
+
+9. **Graph APIs**: They provide methods for interacting with the graph, including querying the status of a component, adding new components, and manipulating the graph itself.
+
+By providing this modular approach to perception pipelines, MediAPI enables developers to build custom algorithms and models, scale them to large datasets, and continuously refine their solutions based on feedback and performance metrics. This flexibility makes MediAPI a powerful tool for ML practitioners and researchers alike.
+INFO:test12_llm_rag_backend_dockerize_ready:The knowledge used was MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash, Chris McClanahan, Esha Uboweja, Michael Hays,
+Fan Zhang, Chuo-Ling Chang, Ming Guang Yong, Juhyun Lee, Wan-Teh Chang, Wei Hua,
+Manfred Georg and Matthias Grundmann
+Google Research
+mediapipe@google.com
+Abstract
+Building applications that perceive the world around
+them is challenging. A developer needs to (a) select and
+develop corresponding machine learning algorithms and
+models, (b) build a series of prototypes and demos, (c) bal-
+ance resource consumption against the quality of the so-
+lutions, and ﬁnally (d) identify and mitigate problematic
+cases. The MediaPipe framework addresses all of these
+challenges. A developer can use MediaPipe to build pro-
+totypes by combining existing perception components, to
+advance them to polished cross-platform applications and
+measure system performance and resource consumption on
+target platforms. We show that these features enable a de-analysis and understanding.
+OpenCV 4.0 introduced the Graph API (G-API) [9]
+which allows speciﬁcation of sequences of OpenCV image
+processing operations in the form of a graph. In contrast,
+our framework allows operations on arbitrary data types
+and has native support for streaming time-series data which
+makes it much more suitable for analyzing audio and sensor
+data.
+3. Architecture
+MediaPipe allows a developer to prototype a pipeline
+incrementally. A pipeline is deﬁned as a directed graph
+of components where each component is a Calculator .
+The graph is speciﬁed using a GraphConfig protocol
+buffer and then run using a Graph object.
+In the graph, the calculators are connected by data
+Streams . Each stream represents a time-series of data
+Packets . Together, the calculators and streams deﬁne a
+data-ﬂow graph. The packets which ﬂow across the graph
+are collated by their timestamps within the time-series.
+The pipeline can be reﬁned incrementally by insertingfence is inserted when the producer node outputs a buffer,
+after the commands used to write the buffer’s contents; in
+other words, it marks a “write complete” point. When con-
+sumers on a different GL context request read access to the
+buffer, a wait operation on the producer fence is inserted.
+Consumer fences are inserted when a consumer node is
+done with a buffer, and mark “read complete” points. These
+are used when the buffer is recycled: before passing it to a
+new producer for writing, the framework waits for all exist-
+ing consumers to ﬁnish reading the old contents.
+Note that synchronization is done in the GPU command
+stream whenever possible, without forcing a CPU sync.
+The framework tries to avoid GPU/CPU sync operations as
+much as possible, and allows pipelining between GPU and
+CPU tasks.
+5. Tools
+This section describes some developer tools that help
+MediaPipe users analyze the performance of their percep-
+tion pipelines.
+5.1. Tracermeasure system performance and resource consumption on
+target platforms. We show that these features enable a de-
+veloper to focus on the algorithm or model development and
+use MediaPipe as an environment for iteratively improving
+their application with results reproducible across different
+devices and platforms. MediaPipe will be open-sourced at
+https://github.com/google/mediapipe .
+1. Introduction
+MediaPipe is a framework for building pipelines to per-
+form inference over arbitrary sensory data. With Medi-
+aPipe, a perception pipeline can be built as a graph of mod-
+ular components, including model inference, media pro-
+cessing algorithms and data transformations, etc. Sensory
+data such as audio and video streams enter the graph, and
+perceived descriptions such as object-localization and face-
+landmark streams exit the graph. An example is shown in
+Figure 1.
+MediaPipe is designed for machine learning (ML) practi-
+tioners, including researchers, students, and software devel-
+INFO:test12_llm_rag_backend_dockerize_ready:len of docs is9
+INFO:test12_llm_rag_backend_dockerize_ready:Printing a bit of all_data MediaPipe: A Framework for Building Perception Pipelines
+Camillo Lugaresi, Jiuqiang Tang, Hadon Nash
+INFO:werkzeug:127.0.0.1 - - [30/Sep/2024 12:48:04] "POST /ans_query HTTP/1.1" 200 -
