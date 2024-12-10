@@ -1,0 +1,31 @@
+FROM python:3.9
+
+#
+
+
+WORKDIR /code
+
+#
+
+
+COPY ./requirements.txt /code/requirements.txt
+
+#
+
+
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+#
+
+
+COPY ./app /code/app
+
+#
+
+
+COPY ./T13_subt1_rag_backend.py /code/
+
+#
+
+
+CMD ["fastapi", "run", "app/T13_subt1_main.py", "--port", "80"]

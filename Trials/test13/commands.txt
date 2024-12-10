@@ -1,0 +1,3 @@
+sudo docker build Dockerfile
+sudo docker run --network="host" docker.io/library/pdfrag:latest  
+sudo  docker build --pull --rm -f "test13/T13_subt1_Dockerfile" -t pdfrag:latest "test13" 
