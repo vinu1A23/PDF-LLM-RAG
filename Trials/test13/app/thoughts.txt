@@ -1,0 +1,4 @@
+using pydantic model for taking in all data together
+
+running test for each incremental functions in code and
+ checking deployment for each version reached 
