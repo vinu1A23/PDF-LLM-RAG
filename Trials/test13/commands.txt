@@ -1,3 +1,35 @@
 sudo docker build Dockerfile
 sudo docker run --network="host" docker.io/library/pdfrag:latest  
 sudo  docker build --pull --rm -f "test13/T13_subt1_Dockerfile" -t pdfrag:latest "test13" 
+python  app\\T13_subt2_main.py
+url now with docker on windows
+ http://localhost:8080/load_pdf/?name=Mediapipe5.pdf
+docker start  c1pdfragt13st2  
+docker run -p 8080:80 --name c1pdfragt13st2 pdfragt13st2
+
+
+Creating an Image from a Dockerfile:
+
+    docker build -t my-image-name . - This command builds an image from the Dockerfile in the current directory and tags it with the name "my-image-name".
+    docker build -f /path/to/Dockerfile -t my-image-name . - This command builds an image from a Dockerfile located at a specific path and tags it with the name "my-image-name".
+
+Running a Container:652732
+
+    docker run -it my-image-name - This command runs a new container from the image "my-image-name" in interactive mode.
+    docker run -d my-image-name - This command runs a new container from the image "my-image-name" in detached mode.
+    docker run -p 8080:80 my-image-name - This command runs a new container from the image "my-image-name" and maps port 8080 on the host machine to port 80 in the container.
+    docker run --name my-container-name my-image-name - This command runs a new container from the image "my-image-name" and assigns it the name "my-container-name".
+
+Managing Containers:
+
+    docker ps - This command lists all running containers.
+    docker ps -a - This command lists all containers, including stopped ones.
+    docker stop my-container-name - This command stops a running container.
+    docker rm my-container-name - This command removes a stopped container.
+    docker logs my-container-name - This command displays the logs of a container.
+
+Managing Images:
+
+    docker images - This command lists all available images.
+    docker rmi my-image-name - This command removes an image.
+    docker tag my-image-name:latest my-image-name:v1 - This command tags an image with a new version number.
