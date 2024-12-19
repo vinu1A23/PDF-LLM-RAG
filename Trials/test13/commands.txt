@@ -6,7 +6,11 @@ url now with docker on windows
  http://localhost:8080/load_pdf/?name=Mediapipe5.pdf
 docker start  c1pdfragt13st2  
 docker run -p 8080:80 --name c1pdfragt13st2 pdfragt13st2
-
+docker build -f T13_subt2_Dockerfile -t pdfragt13st2 .      
+for each time deployment of versions with edited libraries
+run 
+pip freeze > requirements.txt
+docker run -it -p 8080:80 --dns 8.8.8.8 --name c2pdfragt13st4 pdfragt13:st4
 
 Creating an Image from a Dockerfile:
 
@@ -33,3 +37,53 @@ Managing Images:
     docker images - This command lists all available images.
     docker rmi my-image-name - This command removes an image.
     docker tag my-image-name:latest my-image-name:v1 - This command tags an image with a new version number.
+
+To give internet access to a Docker container while creating and starting it, you can use the following methods:
+
+*   Use the `--net=host` flag when running the container. This flag allows the container to use the host's network stack, giving it access to the internet.
+
+    ```bash
+docker run -it --net=host my-image
+```
+
+*   Use the `--dns` flag to specify a DNS server for the container. This flag allows the container to resolve hostnames and access the internet.
+
+    ```bash
+docker run -it --dns 8.8.8.8 my-image
+```
+
+*   Use the `--net` flag with a bridge network. By default, Docker creates a bridge network that allows containers to communicate with each other and the host. You can specify this network when running the container.
+
+    ```bash
+docker run -it --net bridge my-image
+```
+
+*   Create a custom network and attach the container to it. This method gives you more control over the network configuration.
+
+    ```bash
+docker network create my-network
+docker run -it --net my-network my-image
+```
+
+*   Use the `docker-compose` file to define the network configuration. This method is useful when working with multiple containers.
+
+    ```yml
+version: '3'
+services:
+  my-service:
+    image: my-image
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+```
+
+    Then, run the container using `docker-compose up`.
+
+*   If you're using Docker Desktop, you can also configure the network settings in the Docker Desktop preferences.
+
+    Go to **Preferences** > **Resources** > **Network**, and select the network interface you want to use.
+
+Note that the `--net=host` flag can have security implications, as it allows the container to access the host's network stack. Use this flag with caution and only when necessary.
