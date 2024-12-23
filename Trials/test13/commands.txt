@@ -17,7 +17,7 @@ Creating an Image from a Dockerfile:
     docker build -t my-image-name . - This command builds an image from the Dockerfile in the current directory and tags it with the name "my-image-name".
     docker build -f /path/to/Dockerfile -t my-image-name . - This command builds an image from a Dockerfile located at a specific path and tags it with the name "my-image-name".
 
-Running a Container:652732
+Running a Container:
 
     docker run -it my-image-name - This command runs a new container from the image "my-image-name" in interactive mode.
     docker run -d my-image-name - This command runs a new container from the image "my-image-name" in detached mode.
