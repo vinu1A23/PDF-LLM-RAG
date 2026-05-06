@@ -23,9 +23,9 @@ COPY ./app /code/app
 #
 
 
-COPY ./T13_subt4_rag_backend.py /code/
+COPY ./T13_subt5_rag_backend.py /code/
 
 #
 
 
-CMD ["fastapi", "run", "app/T13_subt4_main.py", "--port", "80"]
+CMD ["fastapi", "run", "app/T13_subt5_main.py", "--port", "80"]
